@@ -23,23 +23,23 @@ var Spritzer = function (el) {
     function positionWord() {
         var wordEl = el.firstElementChild,
             highlight = wordEl.firstElementChild
-        
+
         var centerOffsetX = (highlight.offsetWidth / 2) + highlight.offsetLeft,
             centerOffsetY = (highlight.offsetHeight / 2) + highlight.offsetTop
-        
+
         wordEl.style.left = ((el.clientWidth / 2) - centerOffsetX) + 'px'
         wordEl.style.top = ((el.clientHeight / 2) - centerOffsetY) + 'px'
     }
 
     var currentWord = 0,
         delay
-    
+
     var displayNextWord = function() {
         var word = this.words[currentWord++]
         if (typeof word == 'undefined') return
         // WTB> nlp.js...
         var hasPause = /^\(|[,\.\)]$/.test(word)
-        
+
         // XSS?! :(
        	window.el = el
         el.firstElementChild.innerHTML = word

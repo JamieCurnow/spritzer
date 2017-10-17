@@ -1,6 +1,19 @@
+body{
+  width: 435px;
+  height: 60px;
+  border-bottom: 1px solid #949494;
+  border-top: 1px solid #949494;
+  padding-bottom: 15px;
+  margin-top: 7px;
+}
+
 .spritzed {
     padding: 30px;
     position: relative;
+    font-size: 32px;
+    color: #333333;
+    margin-top: 11px;
+    margin-bottom: 0px
 }
 
 .spritzed::before, .spritzed::after {
@@ -9,15 +22,16 @@
     position: absolute;
     left: 50%;
     margin-left: -1px;
-    height: 10px;
+    height: 13px;
     background-color: black;
-    width: 2px;
-    top: 0;
+    width: 1px;
+    top: -11px;
+    color: #333333;
 }
 
 .spritzed::after {
     top: auto;
-    bottom: 0;
+    bottom: -15px;
 }
 
 .spritzed > div {
